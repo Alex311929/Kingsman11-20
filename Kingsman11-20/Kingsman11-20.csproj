@@ -55,7 +55,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Windows\OrderWindow.xaml.cs">
+    <Compile Include="Windows\OrderWindows\CreationOrderWindow.xaml.cs">
+      <DependentUpon>CreationOrderWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\OrderWindows\OrderWindow.xaml.cs">
       <DependentUpon>OrderWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\RolesfWindows\DirectorWindows\DirectorWindow.xaml.cs">
@@ -95,7 +98,11 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Windows\OrderWindow.xaml">
+    <Page Include="Windows\OrderWindows\CreationOrderWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\OrderWindows\OrderWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
