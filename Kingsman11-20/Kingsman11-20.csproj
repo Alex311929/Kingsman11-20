@@ -70,8 +70,8 @@
     <Compile Include="Windows\RolesfWindows\ManagersWindows\StaffWondowForManagers.xaml.cs">
       <DependentUpon>StaffWondowForManagers.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\RolesfWindows\StaffWindows\OrdersWindow.xaml.cs">
-      <DependentUpon>OrdersWindow.xaml</DependentUpon>
+    <Compile Include="Windows\RolesfWindows\StaffWindows\OrdersForStaffWindow.xaml.cs">
+      <DependentUpon>OrdersForStaffWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\WarehouseWindow.xaml.cs">
       <DependentUpon>WarehouseWindow.xaml</DependentUpon>
@@ -115,7 +115,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Windows\RolesfWindows\StaffWindows\OrdersWindow.xaml">
+    <Page Include="Windows\RolesfWindows\StaffWindows\OrdersForStaffWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
