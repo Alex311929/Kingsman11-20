@@ -12,14 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Kingsman11_20.Windows
+namespace Kingsman11_20.Windows.StaffWindows.DirectorWindows
 {
     /// <summary>
-    /// Логика взаимодействия для StaffWindow.xaml
+    /// Логика взаимодействия для DirectorWindow.xaml
     /// </summary>
-    public partial class StaffWindow : Window
+    public partial class DirectorWindow : Window
     {
-        public StaffWindow()
+        public DirectorWindow()
         {
             InitializeComponent();
         }
