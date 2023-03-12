@@ -12,7 +12,7 @@
 <b> Изменение на 12.03.2023 </b>
 
 
-![image](https://user-images.githubusercontent.com/93195326/224549774-c53469c3-c684-4d1f-9dfc-412f92d797ff.png)
+![image](https://user-images.githubusercontent.com/93195326/224550260-fce0f27b-de7d-474a-b23f-503f0159559c.png)
 
 
 <b> DataBase </b>
