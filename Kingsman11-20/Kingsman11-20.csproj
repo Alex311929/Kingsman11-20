@@ -76,7 +76,10 @@
     <Compile Include="Windows\RolesfWindows\StaffWindows\OrdersForStaffWindow.xaml.cs">
       <DependentUpon>OrdersForStaffWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\WarehouseWindow.xaml.cs">
+    <Compile Include="Windows\WarehouseWindows\SupplierWindow.xaml.cs">
+      <DependentUpon>SupplierWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\WarehouseWindows\WarehouseWindow.xaml.cs">
       <DependentUpon>WarehouseWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="Windows\AuthWindow.xaml">
@@ -126,7 +129,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Windows\WarehouseWindow.xaml">
+    <Page Include="Windows\WarehouseWindows\SupplierWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\WarehouseWindows\WarehouseWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
