@@ -124,6 +124,7 @@
     <Compile Include="DataBase\TypeService.cs">
       <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
+    <Compile Include="Res\EF.cs" />
     <Compile Include="Windows\OrderWindows\CreationOrderWindow.xaml.cs">
       <DependentUpon>CreationOrderWindow.xaml</DependentUpon>
     </Compile>
@@ -144,6 +145,9 @@
     </Compile>
     <Compile Include="Windows\RolesfWindows\StaffWindows\OrdersForStaffWindow.xaml.cs">
       <DependentUpon>OrdersForStaffWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ServiceWindow.xaml.cs">
+      <DependentUpon>ServiceWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\WarehouseWindows\SupplierWindow.xaml.cs">
       <DependentUpon>SupplierWindow.xaml</DependentUpon>
@@ -195,6 +199,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\RolesfWindows\StaffWindows\OrdersForStaffWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ServiceWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -255,8 +263,9 @@
       <DependentUpon>DataBase.edmx</DependentUpon>
       <LastGenOutput>DataBase.cs</LastGenOutput>
     </Content>
-    <Resource Include="Res\Image\Icon 1.png" />
+    <Content Include="Res\Image\IMG_0867.jpg" />
     <Resource Include="Res\Image\Logo.png" />
+    <Resource Include="Res\Image\Icon 1.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

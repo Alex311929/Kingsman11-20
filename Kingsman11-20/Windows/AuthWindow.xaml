@@ -9,9 +9,15 @@
         Height="600"
         Width="400"
         WindowStartupLocation="CenterScreen"
-        Icon="/Res/Image/Icon 1.png" Background="#FFDD6121"
+        Icon="/Res/Image/Icon 1.png"
         
         >
+    <Window.Background>
+        <LinearGradientBrush>
+            <GradientStop Color="#DD6121" Offset="0"></GradientStop>
+            <GradientStop Color="#FF8A2910" Offset="1"></GradientStop>
+        </LinearGradientBrush>
+    </Window.Background>
 
     <Grid>
 
@@ -19,7 +25,7 @@
             <Image Height="150"
                    Margin="5">
                 <Image.Source>
-                    /Res/Image/Logo2.png
+                    /Res/Image/Logo.png
                 </Image.Source>
 
             </Image>
@@ -28,19 +34,22 @@
                        FontWeight="Bold"
                        HorizontalAlignment="Center"
                        Margin="0 30 0 0"/>
-            <TextBlock Text="Введите логи"
+            <TextBlock Text="Введите логин"
                        FontSize="18"
                        HorizontalAlignment="Center"
-                       Margin="-95 30 0 0"/>
+                       Margin="-80 30 0 0"
+                       TextDecorations="Underline"/>
             <TextBox x:Name="TbLogin"
                      FontSize="18"                    
                      Width="200"
                      Height="30"
-                     Margin="0 8 0 0"/>
+                     Margin="0 8 0 0"
+                     />
             <TextBlock Text="Введите пароль"
                        FontSize="18"
                        HorizontalAlignment="Center"
-                       Margin="0 16 0 0"/>
+                       Margin="-70 16 0 0"
+                       TextDecorations="Underline"/>
             <PasswordBox x:Name="PbPassword"
                          FontSize="18"                    
                          Width="200"
@@ -48,10 +57,17 @@
                          Margin="0 8 0 0"/>
             <Button x:Name="BtnSignIn" 
                     Content="Войти"
-                    FontSize="18"                    
+                    FontSize="24"                    
                     Width="150"
                     Height="40"
-                    Margin="0 50 0 0" />
+                    Margin="0 30 0 0"
+                    Click="BtnSignIn_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
         </StackPanel>
 
     </Grid>
