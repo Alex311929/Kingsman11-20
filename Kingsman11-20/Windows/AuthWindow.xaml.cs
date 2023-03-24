@@ -42,5 +42,12 @@ namespace Kingsman11_20.Windows
                 MessageBox.Show("Пользователя не существует", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
+        private void TextBlock_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            RegWindow regWindow = new RegWindow();
+            regWindow.Show();
+            this.Close();
+        }
     }
 }

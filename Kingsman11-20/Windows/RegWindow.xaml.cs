@@ -1,5 +1,4 @@
-﻿using Kingsman11_20.Res;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,25 +15,13 @@ using System.Windows.Shapes;
 namespace Kingsman11_20.Windows
 {
     /// <summary>
-    /// Логика взаимодействия для ServiceWindow.xaml
+    /// Логика взаимодействия для RegWindow.xaml
     /// </summary>
-    public partial class ServiceWindow : Window
+    public partial class RegWindow : Window
     {
-        public ServiceWindow()
+        public RegWindow()
         {
             InitializeComponent();
-            GetListService();
-
-
-        }
-        private void GetListService()
-        {
-            LvService.ItemsSource = EF.Context.Service.ToList();
-        }
-
-        private void LvService_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
         }
     }
 }

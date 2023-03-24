@@ -69,6 +69,13 @@
                 </Button.Resources>
             </Button>
         </StackPanel>
-
+        <TextBlock Text="Регистрация"
+                   VerticalAlignment="Bottom"
+                   HorizontalAlignment="Center"
+                   FontSize="18"
+                   TextDecorations="Underline"
+                   Margin="0 10 0 10" MouseLeftButtonDown="TextBlock_MouseLeftButtonDown">
+            
+        </TextBlock>
     </Grid>
 </Window>

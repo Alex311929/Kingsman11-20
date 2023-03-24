@@ -1,0 +1,15 @@
+﻿<Window x:Class="Kingsman11_20.Windows.RegWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kingsman11_20.Windows"
+        mc:Ignorable="d"
+        Title="RegWindow" Height="600"
+        Width="400"
+        WindowStartupLocation="CenterScreen"
+        Icon="/Res/Image/Icon 1.png">
+    <Grid>
+        
+    </Grid>
+</Window>
