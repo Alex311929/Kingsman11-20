@@ -26,13 +26,21 @@
 
 <b> Авторизация </b>
 
-![image](https://user-images.githubusercontent.com/93195326/228058008-5d62c406-5722-4136-ae53-42fc544b3ba1.png)
+![image](https://user-images.githubusercontent.com/93195326/228079417-16a7c871-7fe8-482b-8b1c-16dd5e09b0ad.png)
 
 <b> Успешный вход </b>
 
-![image](https://user-images.githubusercontent.com/93195326/228058358-bbe414bb-dc72-44d5-b18b-d137e7519bb8.png)
+![image](https://user-images.githubusercontent.com/93195326/228080315-bd76af33-249b-4155-9866-9e6f49fa9739.png)
 
 <b> НЕ успешный вход </b>
 
 
-![image](https://user-images.githubusercontent.com/93195326/228058309-1800e68b-1ab4-46f9-8902-83442cdcb831.png)
+![image](https://user-images.githubusercontent.com/93195326/228080361-f077fd80-9397-4565-8ee5-200ad9e340fc.png)
+
+
+<b> Окно сервиса </b>
+
+
+![image](https://user-images.githubusercontent.com/93195326/228080578-e2d7ac82-5293-4e1c-b638-63a27f4a7e65.png)
+
+
