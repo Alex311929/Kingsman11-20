@@ -8,23 +8,57 @@
         Title="ServiceWindow" 
         Height="768" 
         Width="1024"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen"
+        Icon="/Res/Image/Icon 1.png">
+    <Window.Background>
+        <LinearGradientBrush>
+            <GradientStop Color="#DD6121" Offset="0"></GradientStop>
+            <GradientStop Color="#FF8A29" Offset="1"></GradientStop>
+        </LinearGradientBrush>
+    </Window.Background>
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="100"/>
             <RowDefinition Height="50"/>
             <RowDefinition Height="10*"/>
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Text="Список услуг"
-                   HorizontalAlignment="Center"
+        <TextBlock Text="Kingsman"
+                   HorizontalAlignment="Left"
                    VerticalAlignment="Center"
-                   FontSize="30"
-                   FontWeight="Bold"/>
+                   FontSize="45"
+                   FontWeight="Bold"
+                   FontFamily="Georgia"
+                   Margin="20 20 0 0">
+            
+        </TextBlock>
+        <ListView x:Name="Title"
+                  Grid.Row="1" 
+                  BorderBrush="{x:Null}">
+            <ListView.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#FFDE6221" Offset="0"></GradientStop>
+                    <GradientStop Color="#FFF78027" Offset="1"></GradientStop>
+                </LinearGradientBrush>
+            </ListView.Background>
+            <TextBlock Margin=" 20 8 0 0 ">
+               <Run FontSize="25"
+                    Foreground="#000">Список услуг</Run>
+            </TextBlock>
+        </ListView>
+
         <ListView x:Name="LvService" 
                   Grid.Row="2"
-                  ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectionChanged="LvService_SelectionChanged" d:ItemsSource="{d:SampleData ItemCount=5}">
+                  ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
+                  SelectionChanged="LvService_SelectionChanged"
+                  d:ItemsSource="{d:SampleData ItemCount=5}">
+            <ListView.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#DD6121" Offset="0"></GradientStop>
+                    <GradientStop Color="#FF8A29" Offset="1"></GradientStop>
+                </LinearGradientBrush>
+            </ListView.Background>
             <ListView.ItemsPanel>
                 <ItemsPanelTemplate>
                     <WrapPanel/>
@@ -34,7 +68,7 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Border BorderBrush="Gray"
-                            BorderThickness="2"
+                            BorderThickness="3"
                             Width="200"
                             Height="300"
                             Margin="16"
@@ -46,11 +80,12 @@
                                 <Image.Source>
                                     <Binding Path ="Image">
                                         <Binding.TargetNullValue>
-                                            <ImageSource>/Res/Image/IMG_0867.jpg</ImageSource>
+                                            <ImageSource>C:\Users\PC\source\repos\Kingsman11-20\Kingsman11-20\Res\Image\IMG_0867.jpg</ImageSource>
                                         </Binding.TargetNullValue>
                                     </Binding>
                                 </Image.Source>
                             </Image>
+                            
 
                             <TextBlock Text="{Binding Title}"
                                        FontSize="18"
@@ -58,7 +93,7 @@
                             <TextBlock Text="{Binding Cost}"
                                        FontSize="18"
                                        Margin="5 3"/>
-                            <TextBlock Text="{Binding Description}"
+                            <TextBlock Text="{Binding Discription}"
                                        FontSize="18"
                                        Margin="5 3"
                                        TextWrapping="Wrap" 
@@ -68,5 +103,28 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <ListView x:Name="Button"
+                  Grid.Row="3" BorderBrush="{x:Null}">
+            <ListView.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#FFE56A23" Offset="0"></GradientStop>
+                    <GradientStop Color="#FFFE8929" Offset="1"></GradientStop>
+                </LinearGradientBrush>
+            </ListView.Background>
+            <Button Content="Выход"
+                    FontSize="25"
+                    Margin=" 870 0 10 20"
+                    Background="{x:Null}"
+                    BorderThickness="2" Click="Button_Click"
+                    >
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" 
+                                Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </ListView>
+  
     </Grid>
 </Window>

@@ -12,14 +12,69 @@
         Icon="/Res/Image/Icon 1.png"
         
         >
+    <Window.Resources>
+        <Style TargetType="TextBox" x:Key="TextBoxRad">
+            <Setter Property="Padding" Value="5 0 0 0"/>
+            <Setter Property="Margin" Value="0 8 0 0"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="30"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Border x:Name="border"
+                                CornerRadius="10"
+                                BorderBrush="#000"
+                                BorderThickness="2"
+                                Background="#fff">
+                            <ScrollViewer x:Name="PART_ContentHost"
+                                Focusable="false"
+                                HorizontalScrollBarVisibility="Hidden"
+                                VerticalScrollBarVisibility="Hidden"/>
+                        </Border>
+                        
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            
+        </Style>
+        <Style TargetType="PasswordBox" x:Key="PassBoxRad">
+            <Setter Property="Padding" Value="5 0 0 0"/>
+            <Setter Property="Margin" Value="0 8 0 0"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="30"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type PasswordBox}">
+                        <Border x:Name="border"
+                                CornerRadius="10"
+                                BorderBrush="#000"
+                                BorderThickness="2"
+                                Background="#fff">
+                            <ScrollViewer x:Name="PART_ContentHost"
+                                Focusable="false"
+                                HorizontalScrollBarVisibility="Hidden"
+                                VerticalScrollBarVisibility="Hidden"/>
+                        </Border>
+
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </Window.Resources>
     <Window.Background>
         <LinearGradientBrush>
             <GradientStop Color="#DD6121" Offset="0"></GradientStop>
-            <GradientStop Color="#FF8A2910" Offset="1"></GradientStop>
+            <GradientStop Color="#FF8A29" Offset="1"></GradientStop>
         </LinearGradientBrush>
     </Window.Background>
 
     <Grid>
+        
 
         <StackPanel VerticalAlignment="Center">
             <Image Height="150"
@@ -31,7 +86,7 @@
             </Image>
             <TextBlock Text="Авторизация"
                        FontSize="28"
-                       FontWeight="Bold"
+                       
                        HorizontalAlignment="Center"
                        Margin="0 30 0 0"/>
             <TextBlock Text="Введите логин"
@@ -40,28 +95,26 @@
                        Margin="-80 30 0 0"
                        TextDecorations="Underline"/>
             <TextBox x:Name="TbLogin"
-                     FontSize="18"                    
-                     Width="200"
-                     Height="30"
-                     Margin="0 8 0 0"
-                     />
+                     
+                     Style="{StaticResource TextBoxRad}">
+
+            </TextBox>
             <TextBlock Text="Введите пароль"
                        FontSize="18"
                        HorizontalAlignment="Center"
                        Margin="-70 16 0 0"
                        TextDecorations="Underline"/>
             <PasswordBox x:Name="PbPassword"
-                         FontSize="18"                    
-                         Width="200"
-                         Height="30"
-                         Margin="0 8 0 0"/>
+                         Style="{StaticResource PassBoxRad}"/>
             <Button x:Name="BtnSignIn" 
                     Content="Войти"
                     FontSize="24"                    
                     Width="150"
                     Height="40"
-                    Margin="0 30 0 0"
-                    Click="BtnSignIn_Click">
+                    Margin="0 30 0 2"
+                    Click="BtnSignIn_Click"
+                    BorderBrush="#000"
+                    BorderThickness="2">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>

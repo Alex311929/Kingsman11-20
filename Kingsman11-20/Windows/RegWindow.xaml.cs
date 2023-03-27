@@ -1,6 +1,9 @@
-﻿using System;
+﻿using Kingsman11_20.Res;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -23,5 +26,22 @@ namespace Kingsman11_20.Windows
         {
             InitializeComponent();
         }
+
+        private void BtnReg_Click(object sender, RoutedEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(TbLastName.Text))
+            {
+                MessageBox.Show("Поле Фамилия не заполнено");
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(TbFirstName.Text))
+            {
+                MessageBox.Show("Поле Имя не заполнено");
+                return;
+            }
+            
+            
+        }
+        
     }
 }

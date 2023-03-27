@@ -5,11 +5,170 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Kingsman11_20.Windows"
         mc:Ignorable="d"
-        Title="RegWindow" Height="600"
-        Width="400"
+        Title="RegWindow" 
+        Height="1000"
+        Width="500"
         WindowStartupLocation="CenterScreen"
         Icon="/Res/Image/Icon 1.png">
+    <Window.Resources>
+        <Style TargetType="TextBox" x:Key="TextBoxRad">
+            <Setter Property="Padding" Value="5 0 0 0"/>
+            <Setter Property="Margin" Value="0 8 0 0"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="30"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Border x:Name="border"
+                                CornerRadius="10"
+                                BorderBrush="#000"
+                                BorderThickness="2"
+                                Background="#fff">
+                            <ScrollViewer x:Name="PART_ContentHost"
+                                Focusable="false"
+                                HorizontalScrollBarVisibility="Hidden"
+                                VerticalScrollBarVisibility="Hidden"/>
+                        </Border>
+
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+        </Style>
+        <Style TargetType="PasswordBox" x:Key="PassBoxRad">
+            <Setter Property="Padding" Value="5 0 0 0"/>
+            <Setter Property="Margin" Value="0 8 0 0"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="30"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type PasswordBox}">
+                        <Border x:Name="border"
+                                CornerRadius="10"
+                                BorderBrush="#000"
+                                BorderThickness="2"
+                                Background="#fff">
+                            <ScrollViewer x:Name="PART_ContentHost"
+                                Focusable="false"
+                                HorizontalScrollBarVisibility="Hidden"
+                                VerticalScrollBarVisibility="Hidden"/>
+                        </Border>
+
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="ComboBox" x:Key="ComboBoxRad">
+            <Setter Property="Padding" Value="5 0 0 0"/>
+            <Setter Property="Margin" Value="0 8 0 0"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="30"/>
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ComboBox}">
+                        <Border x:Name="border"
+                                CornerRadius="10"
+                                BorderBrush="#000"
+                                BorderThickness="2"
+                                Background="#fff">
+                            <ScrollViewer x:Name="PART_ContentHost"
+                                Focusable="false"
+                                HorizontalScrollBarVisibility="Hidden"
+                                VerticalScrollBarVisibility="Hidden"/>
+                        </Border>
+
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </Window.Resources>
+    <Window.Background>
+        <LinearGradientBrush>
+            <GradientStop Color="#DD6121" Offset="0"></GradientStop>
+            <GradientStop Color="#FF8A29" Offset="1"></GradientStop>
+        </LinearGradientBrush>
+    </Window.Background>
+
     <Grid>
+        <StackPanel VerticalAlignment="Center">
+            <TextBlock Text="Регистрация"
+                       FontSize="28"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center"
+                       Margin="0 10 0 0"/>
+
+            <TextBlock Text="Введите логин"
+                       FontSize="18"
+                       HorizontalAlignment="Center"
+                       Margin="0 50 0 0"/>
+            <TextBox x:Name="TbLogin"
+                     Style="{StaticResource TextBoxRad}"/>
+
+            <TextBlock Text="Введите пароль"
+                       FontSize="18"
+                       HorizontalAlignment="Center"
+                       Margin="0 16 0 0"/>
+            <PasswordBox x:Name="PbPassword"
+                         Style="{StaticResource PassBoxRad}"/>
+
+            <TextBlock Text="Введите фамилию"
+                       FontSize="18"
+                       HorizontalAlignment="Center"
+                       Margin="0 16 0 0"/>
+            <TextBox x:Name="TbLastName"
+                     Style="{StaticResource TextBoxRad}"/>
+
+            <TextBlock Text="Введите имя"
+                       FontSize="18"
+                       HorizontalAlignment="Center"
+                       Margin="0 16 0 0"/>
+            <TextBox x:Name="TbFirstName"
+                     Style="{StaticResource TextBoxRad}"/>
+
+            
+
+            <TextBlock Text="Введите телефон"
+                       FontSize="18"
+                       HorizontalAlignment="Center"
+                       Margin="0 16 0 0"/>
+            <TextBox x:Name="TbPhone"
+                     Style="{StaticResource TextBoxRad}"/>
+
+            <TextBlock Text="Выберите пол"
+                       FontSize="18"
+                       HorizontalAlignment="Center"
+                       Margin="0 16 0 0"/>
+            <ComboBox x:Name="CmbGender"
+                     FontSize="18"                    
+                     Width="200"
+                     Height="30"
+                     Margin="0 8 0 0"/>
+
+            <Button x:Name="BtnReg" 
+                   Content="Регистрация"
+                    FontSize="24"                    
+                    Width="200"
+                    Height="40"
+                    Margin="0 30 0 2"
+                    Click="BtnReg_Click"
+                    BorderBrush="#000"
+                    BorderThickness="2">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </StackPanel>
+
+       
         
     </Grid>
 </Window>

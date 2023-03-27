@@ -36,5 +36,12 @@ namespace Kingsman11_20.Windows
         {
 
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            AuthWindow authWindow = new AuthWindow();
+            authWindow.Show();
+            this.Close();
+        }
     }
 }

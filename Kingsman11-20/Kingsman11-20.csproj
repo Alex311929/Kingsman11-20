@@ -271,6 +271,7 @@
       <LastGenOutput>DataBase.cs</LastGenOutput>
     </Content>
     <Content Include="Res\Image\IMG_0867.jpg" />
+    <Resource Include="Res\Image\Logo2.png" />
     <Resource Include="Res\Image\Logo.png" />
     <Resource Include="Res\Image\Icon 1.png" />
   </ItemGroup>
