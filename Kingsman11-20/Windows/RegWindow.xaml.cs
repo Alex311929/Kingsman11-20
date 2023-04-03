@@ -25,6 +25,9 @@ namespace Kingsman11_20.Windows
         public RegWindow()
         {
             InitializeComponent();
+            CmbGender.ItemsSource = EF.Context.Gender.ToList();
+            CmbGender.DisplayMemberPath = "GenderName";
+            CmbGender.SelectedIndex = 0;
         }
 
         private void BtnReg_Click(object sender, RoutedEventArgs e)
@@ -40,7 +43,15 @@ namespace Kingsman11_20.Windows
                 return;
             }
             
-            
+            DataBase.Client addClinet = new DataBase.Client();
+            addClinet.FName = TbFirstName.Text;
+            addClinet.LName = TbLastName.Text;
+            addClinet.Phone = TbPhone.Text;
+            addClinet.IdGender = (CmbGender.SelectedItem as DataBase.Gender).Id;
+
+            EF.Context.Client.Add(addClinet);
+            EF.Context.SaveChanges();
+            MessageBox.Show("Клиент добавлен");
         }
         
     }
