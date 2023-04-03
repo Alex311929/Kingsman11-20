@@ -44,3 +44,8 @@
 ![image](https://user-images.githubusercontent.com/93195326/228080578-e2d7ac82-5293-4e1c-b638-63a27f4a7e65.png)
 
 
+
+<b> Регистрация </b> 
+
+
+![image](https://user-images.githubusercontent.com/93195326/229633433-7b863c11-0278-481f-95c1-c89443fe83d9.png)
