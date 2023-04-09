@@ -125,6 +125,9 @@
       <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
     <Compile Include="ClassHelper\EF.cs" />
+    <Compile Include="Windows\AddWindow.xaml.cs">
+      <DependentUpon>AddWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\OrderWindows\CreationOrderWindow.xaml.cs">
       <DependentUpon>CreationOrderWindow.xaml</DependentUpon>
     </Compile>
@@ -158,6 +161,10 @@
     <Compile Include="Windows\WarehouseWindows\WarehouseWindow.xaml.cs">
       <DependentUpon>WarehouseWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="Windows\AddWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\AuthWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
