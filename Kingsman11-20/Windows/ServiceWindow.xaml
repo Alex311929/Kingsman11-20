@@ -80,7 +80,7 @@
                                 <Image.Source>
                                     <Binding Path ="Image">
                                         <Binding.TargetNullValue>
-                                            <ImageSource>C:\Users\PC\source\repos\Kingsman11-20\Kingsman11-20\Res\Image\IMG_0867.jpg</ImageSource>
+                                            <ImageSource>\Res\Image\IMG_0867.jpg</ImageSource>
                                         </Binding.TargetNullValue>
                                     </Binding>
                                 </Image.Source>
