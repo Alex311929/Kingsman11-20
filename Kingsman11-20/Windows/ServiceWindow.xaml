@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Kingsman11_20.Windows"
         mc:Ignorable="d"
         Title="ServiceWindow" 
-        Height="768" 
+        Height="800" 
         Width="1024"
         WindowStartupLocation="CenterScreen"
         Icon="/Res/Image/Icon 1.png">
@@ -21,7 +21,7 @@
             <RowDefinition Height="100"/>
             <RowDefinition Height="50"/>
             <RowDefinition Height="10*"/>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="60"/>
         </Grid.RowDefinitions>
 
         <TextBlock Text="Kingsman"
@@ -31,17 +31,12 @@
                    FontWeight="Bold"
                    FontFamily="Georgia"
                    Margin="20 20 0 0">
-            
+
         </TextBlock>
         <ListView x:Name="Title"
                   Grid.Row="1" 
-                  BorderBrush="{x:Null}">
-            <ListView.Background>
-                <LinearGradientBrush>
-                    <GradientStop Color="#FFDE6221" Offset="0"></GradientStop>
-                    <GradientStop Color="#FFF78027" Offset="1"></GradientStop>
-                </LinearGradientBrush>
-            </ListView.Background>
+                  BorderBrush="{x:Null}"
+                  Background="{x:Null}">
             <TextBlock Margin=" 20 8 0 0 ">
                <Run FontSize="25"
                     Foreground="#000">Список услуг</Run>
@@ -52,13 +47,8 @@
                   Grid.Row="2"
                   ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
                   SelectionChanged="LvService_SelectionChanged"
-                  d:ItemsSource="{d:SampleData ItemCount=5}">
-            <ListView.Background>
-                <LinearGradientBrush>
-                    <GradientStop Color="#DD6121" Offset="0"></GradientStop>
-                    <GradientStop Color="#FF8A29" Offset="1"></GradientStop>
-                </LinearGradientBrush>
-            </ListView.Background>
+                  d:ItemsSource="{d:SampleData ItemCount=5}"
+                  Background="{x:Null}">
             <ListView.ItemsPanel>
                 <ItemsPanelTemplate>
                     <WrapPanel/>
@@ -70,7 +60,7 @@
                     <Border BorderBrush="Gray"
                             BorderThickness="3"
                             Width="200"
-                            Height="300"
+                            Height="350"
                             Margin="16"
                             CornerRadius="8">
                         <StackPanel>
@@ -80,12 +70,12 @@
                                 <Image.Source>
                                     <Binding Path ="Image">
                                         <Binding.TargetNullValue>
-                                            <ImageSource>\Res\Image\IMG_0867.jpg</ImageSource>
+                                            <Image Source="/Res/Image/ServTest.png"/>
                                         </Binding.TargetNullValue>
                                     </Binding>
                                 </Image.Source>
                             </Image>
-                            
+
 
                             <TextBlock Text="{Binding Title}"
                                        FontSize="18"
@@ -98,33 +88,43 @@
                                        Margin="5 3"
                                        TextWrapping="Wrap" 
                                        FontFamily="Arial Rounded MT Bold"/>
+                            <Button x:Name="BtnEdit"
+                                    Width="40"
+                                    Height="40"
+                                    HorizontalAlignment="Right"
+                                    Margin="10 5 0 0"
+                                    Background="{x:Null}"
+                                    BorderThickness="0"
+                                    Click="BtnEdit_Click">
+                                <Image Source="/Res/Image/edit.png"/>
+                            </Button>
                         </StackPanel>
                     </Border>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <ListView x:Name="Button"
-                  Grid.Row="3" BorderBrush="{x:Null}">
-            <ListView.Background>
-                <LinearGradientBrush>
-                    <GradientStop Color="#FFE56A23" Offset="0"></GradientStop>
-                    <GradientStop Color="#FFFE8929" Offset="1"></GradientStop>
-                </LinearGradientBrush>
-            </ListView.Background>
-            <Button Content="Выход"
-                    FontSize="25"
-                    Margin=" 870 0 10 20"
-                    Background="{x:Null}"
-                    BorderThickness="2" Click="Button_Click"
-                    >
-                <Button.Resources>
-                    <Style TargetType="Border">
-                        <Setter Property="CornerRadius" 
-                                Value="5"/>
-                    </Style>
-                </Button.Resources>
-            </Button>
-        </ListView>
-  
+        <Button x:Name="BtnAddService"
+                Grid.Row="3"
+                Width="44"
+                Height="40"
+                Background="{x:Null}"
+                BorderThickness="0"
+                HorizontalAlignment="Right"
+                Margin="0 0 70 0"
+                Click="BtnAddService_Click">
+            <Image Source="/Res/Image/Add.png"/>
+        </Button>
+        <Button x:Name="BtExit"
+                Grid.Row="3"
+                Background="{x:Null}"
+                BorderBrush="{x:Null}"
+                Foreground="{x:Null}"
+                HorizontalAlignment="Right"
+                Margin="0 0 20 0"
+                Height="44"
+                Width="40"
+                Click="BtExit_Click">
+            <Image Source="/Res/Image/Exit.png"/>
+        </Button>
     </Grid>
 </Window>

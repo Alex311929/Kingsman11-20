@@ -128,6 +128,9 @@
     <Compile Include="Windows\AddWindow.xaml.cs">
       <DependentUpon>AddWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\EditServiceWindow.xaml.cs">
+      <DependentUpon>EditServiceWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\OrderWindows\CreationOrderWindow.xaml.cs">
       <DependentUpon>CreationOrderWindow.xaml</DependentUpon>
     </Compile>
@@ -163,6 +166,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\AuthWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\EditServiceWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -271,7 +278,9 @@
       <LastGenOutput>DataBase.cs</LastGenOutput>
     </Content>
     <Resource Include="Res\Image\Exit.png" />
-    <Content Include="Res\Image\IMG_0867.jpg" />
+    <Resource Include="Res\Image\edit.png" />
+    <Resource Include="Res\Image\Add.png" />
+    <Content Include="Res\Image\ServTest.jpg" />
     <Resource Include="Res\Image\Logo2.png" />
     <Resource Include="Res\Image\Logo.png" />
     <Resource Include="Res\Image\Icon 1.png" />

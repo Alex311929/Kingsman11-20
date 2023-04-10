@@ -37,11 +37,34 @@ namespace Kingsman11_20.Windows
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void BtExit_Click(object sender, RoutedEventArgs e)
         {
             AuthWindow authWindow = new AuthWindow();
             authWindow.Show();
             this.Close();
+        }
+
+        private void BtnEdit_Click(object sender, RoutedEventArgs e)
+        {
+            var button = sender as Button;
+            if (button != null)
+            {
+                return;
+            }
+            var service = button.DataContext as DataBase.Service;
+
+            EditServiceWindow editServiceWindow = new EditServiceWindow();
+            editServiceWindow.ShowDialog();
+
+            GetListService();
+        }
+
+        private void BtnAddService_Click(object sender, RoutedEventArgs e)
+        {
+            AddWindow addWindow = new AddWindow();
+            addWindow.ShowDialog();
+
+            GetListService();
         }
     }
 }
