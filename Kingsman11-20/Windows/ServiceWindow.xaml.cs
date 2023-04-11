@@ -66,5 +66,10 @@ namespace Kingsman11_20.Windows
 
             GetListService();
         }
+
+        private void BtnCart_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

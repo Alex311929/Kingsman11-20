@@ -64,6 +64,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ClassHelper\CartServiceClass.cs" />
     <Compile Include="DataBase\Client.cs">
       <DependentUpon>DataBase.tt</DependentUpon>
     </Compile>
@@ -128,6 +129,9 @@
     <Compile Include="Windows\AddWindow.xaml.cs">
       <DependentUpon>AddWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\CartWindow.xaml.cs">
+      <DependentUpon>CartWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\EditServiceWindow.xaml.cs">
       <DependentUpon>EditServiceWindow.xaml</DependentUpon>
     </Compile>
@@ -166,6 +170,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\AuthWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\CartWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -280,6 +288,7 @@
     <Resource Include="Res\Image\Exit.png" />
     <Resource Include="Res\Image\edit.png" />
     <Resource Include="Res\Image\Add.png" />
+    <Resource Include="Res\Image\Cart.png" />
     <Content Include="Res\Image\ServTest.jpg" />
     <Resource Include="Res\Image\Logo2.png" />
     <Resource Include="Res\Image\Logo.png" />
