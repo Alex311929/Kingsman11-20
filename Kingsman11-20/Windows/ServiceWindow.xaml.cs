@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Kingsman11_20.ClassHelper;
 
 namespace Kingsman11_20.Windows
 {
@@ -67,9 +68,25 @@ namespace Kingsman11_20.Windows
             GetListService();
         }
 
-        private void BtnCart_Click(object sender, RoutedEventArgs e)
+        private void BtnAddToCart_Click(object sender, RoutedEventArgs e)
         {
+            var button = sender as Button;
+            if (button == null)
+            {
+                return;
+            }
+            var service = button.DataContext as DataBase.Service;
 
+            CartServiceClass.ServiceCart.Add(service);
+
+            MessageBox.Show($"Услуга {service.Title} доваблена в корзину!");
+        }
+
+        private void BtnGoToCart_Click(Object sender, RoutedEventArgs e)
+        {
+            CartWindow cartWindow = new CartWindow();
+            cartWindow.Show();
+            this.Close();
         }
     }
 }

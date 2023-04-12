@@ -289,6 +289,7 @@
     <Resource Include="Res\Image\edit.png" />
     <Resource Include="Res\Image\Add.png" />
     <Resource Include="Res\Image\Cart.png" />
+    <Resource Include="Res\Image\Remove.png" />
     <Content Include="Res\Image\ServTest.jpg" />
     <Resource Include="Res\Image\Logo2.png" />
     <Resource Include="Res\Image\Logo.png" />

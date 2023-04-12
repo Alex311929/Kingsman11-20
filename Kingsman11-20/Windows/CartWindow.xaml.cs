@@ -22,9 +22,36 @@ namespace Kingsman11_20.Windows
         public CartWindow()
         {
             InitializeComponent();
+           
         }
 
-        private void LvService_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void GetListService()
+        {
+            LvService.ItemsSource = ClassHelper.CartServiceClass.ServiceCart;
+        }
+
+        private void BtnRomoveToCart_Click(object sender, RoutedEventArgs e)
+        {
+            var button = sender as Button;
+            if (button == null)
+            {
+                return;
+            }
+            var service = button.DataContext as DataBase.Service;
+
+            ClassHelper.CartServiceClass.ServiceCart.Remove(service);
+
+            GetListService();
+        }
+
+        private void BtBack_Click(object sender, RoutedEventArgs e)
+        {
+            ServiceWindow serviceWindow = new ServiceWindow();
+            serviceWindow.Show();
+            this.Close();
+        }
+
+        private void LvService_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
         {
 
         }

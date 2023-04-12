@@ -33,30 +33,28 @@
                    Margin="20 20 0 0">
 
         </TextBlock>
-        <WrapPanel x:Name="Title"
-                  Grid.Row="1"
-                  Background="{x:Null}">
-            <TextBlock Margin=" 20 8 0 0 ">
+
+        <TextBlock Margin=" 20 8 0 0 "
+                   Grid.Row="1">
                <Run FontSize="25"
                     Foreground="#000">Список услуг</Run>
-            </TextBlock>
-            <Button x:Name="BtnGoToCart"
+        </TextBlock>
+        <Button x:Name="BtnGoToCart"
                     Width="40"
                     Height="40"
                     HorizontalAlignment="Right"
-                    Margin="800 5 0 0"
+                    Margin="0 0 20 0"
                     Background="{x:Null}"
                     BorderThickness="0"
-                    Click="BtnGoToCart_Click">
-                <Image Source="/Res/Image/Cart.png"/>
-            </Button>
-        </WrapPanel>
+                    Click="BtnGoToCart_Click"
+                Grid.Row="1">
+            <Image Source="/Res/Image/Cart.png"/>
+        </Button>
 
         <ListView x:Name="LvService" 
-                  Grid.Row="2"
-                  ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
-                  SelectionChanged="LvService_SelectionChanged"
+                  Grid.Row="2" 
                   d:ItemsSource="{d:SampleData ItemCount=5}"
+                  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                   Background="{x:Null}">
             <ListView.ItemsPanel>
                 <ItemsPanelTemplate>
@@ -115,7 +113,7 @@
                                     Margin="90 5 0 0"
                                     Background="{x:Null}"
                                     BorderThickness="0"
-                                    Click="BtnCart_Click">
+                                    Click="BtnAddToCart_Click">
                                     <Image Source="/Res/Image/Cart.png"/>
                                 </Button>
                             </WrapPanel>

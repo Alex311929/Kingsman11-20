@@ -5,8 +5,126 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Kingsman11_20.Windows"
         mc:Ignorable="d"
-        Title="CartWindow" Height="450" Width="800">
+        Title="CartWindow" 
+         Height="800" 
+        Width="1024"
+        WindowStartupLocation="CenterScreen"
+        Icon="/Res/Image/Icon 1.png">
+    <Window.Background>
+        <LinearGradientBrush>
+            <GradientStop Color="#DD6121" Offset="0"></GradientStop>
+            <GradientStop Color="#FF8A29" Offset="1"></GradientStop>
+        </LinearGradientBrush>
+    </Window.Background>
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Kingsman"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Center"
+                   FontSize="45"
+                   FontWeight="Bold"
+                   FontFamily="Georgia"
+                   Margin="20 20 0 0">
+
+        </TextBlock>
+
+        <TextBlock Margin=" 20 8 0 0 "
+                   Grid.Row="1">
+               <Run FontSize="25"
+                    Foreground="#000"
+                    FontWeight="Bold">Корзина</Run>
+        </TextBlock>
+        <Button x:Name="BtnGoToCart"
+                    Width="40"
+                    Height="40"
+                    HorizontalAlignment="Right"
+                    Margin="0 0 20 0"
+                    Background="{x:Null}"
+                    BorderThickness="0"
+                    
+                Grid.Row="1">
+            <Image Source="/Res/Image/Cart.png"/>
+        </Button>
+
+        <ListView x:Name="LvService" 
+                  Grid.Row="2" 
+                  d:ItemsSource="{d:SampleData ItemCount=5}"
+                  ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                  Background="{x:Null}" SelectionChanged="LvService_SelectionChanged_1">
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel/>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="Gray"
+                            BorderThickness="3"
+                            Width="200"
+                            Height="350"
+                            Margin="16"
+                            CornerRadius="8">
+                        <StackPanel>
+                            <Image Height="180"
+                                   Width="200" 
+                                   Margin="8">
+                                <Image.Source>
+                                    <Binding Path ="Image">
+                                        <Binding.TargetNullValue>
+                                            <Image Source="/Res/Image/ServTest.png"/>
+                                        </Binding.TargetNullValue>
+                                    </Binding>
+                                </Image.Source>
+                            </Image>
+
+
+                            <TextBlock Text="{Binding Title}"
+                                       FontSize="18"
+                                       Margin="5 3"/>
+                            <TextBlock Text="{Binding Cost}"
+                                       FontSize="18"
+                                       Margin="5 3"/>
+                            <TextBlock Text="{Binding Discription}"
+                                       FontSize="18"
+                                       Margin="5 3"
+                                       TextWrapping="Wrap" 
+                                       FontFamily="Arial Rounded MT Bold"/>
+                            <WrapPanel HorizontalAlignment="Right">
+                                <Button x:Name="BtnRomoveToCart"
+                                    Width="40"
+                                    Height="40"
+                                    HorizontalAlignment="Right"
+                                    Margin="90 5 0 0"
+                                    Background="{x:Null}"
+                                    BorderThickness="0"
+                                    Click="BtnRomoveToCart_Click">
+                                    <Image Source="/Res/Image/Remove.png"/>
+                                </Button>
+                            </WrapPanel>
+
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button x:Name="BtBack"
+                Grid.Row="3"
+                Background="{x:Null}"
+                BorderBrush="{x:Null}"
+                Foreground="{x:Null}"
+                HorizontalAlignment="Right"
+                Margin="0 0 20 0"
+                Height="44"
+                Width="40"
+                Click="BtBack_Click">
+            <Image Source="/Res/Image/Exit.png"/>
+        </Button>
     </Grid>
 </Window>
