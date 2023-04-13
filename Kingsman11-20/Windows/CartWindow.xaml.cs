@@ -22,6 +22,7 @@ namespace Kingsman11_20.Windows
         public CartWindow()
         {
             InitializeComponent();
+            GetListService();
            
         }
 
@@ -52,6 +53,11 @@ namespace Kingsman11_20.Windows
         }
 
         private void LvService_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void BtBuy_Click(object sender, RoutedEventArgs e)
         {
 
         }
